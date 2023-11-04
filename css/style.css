@@ -1,0 +1,704 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+
+	.bg_pattern {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: green;
+		opacity: 0.4;
+		z-index: -10000;
+	}
+
+	/* 背景パターン */
+	.Crown {
+		background-image: linear-gradient(45deg, #68a225 25%, transparent 25%), linear-gradient(315deg, #265000 25%, #b3de81 25%);
+		background-position: 10px 0, 20px 0, 0 0, 0 0;
+		background-size: 20px 20px;
+		background-repeat: repeat;
+	}
+
+
+
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+
+
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+/*文字の装飾*/
+/* 文字消し */
+.mojikesi {
+	color: #fdffff;
+}
+
+/* 基本のテキスト部分 */
+.text-normal {
+	width: 85%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	line-height: 30px;
+	font-weight: bold;
+	background-color: #fdffff;
+}
+
+.text-another {
+	margin-left: 30px;
+	line-height: 50px;
+	font-weight: bold;
+	font-size: x-large;
+}
+
+.text-another_list {
+	margin-left: 50px;
+	line-height: 40px;
+	font-weight: bold;
+	font-size: large;
+}
+
+.text-another_list_a {
+	margin-left: 55px;
+	line-height: 20px;
+	text-decoration: underline;
+	font-size: medium;
+}
+
+/* ゲーム風フォント */
+@font-face {
+	font-family: TheStrongGamer;
+	src: url(../fonts/x8y12pxTheStrongGamer.ttf);
+}
+
+/* 	蛍光ペン風下線 */
+.hightlight_y {
+	text-decoration: underline;
+	text-decoration-thickness: 0.5em;
+	text-decoration-color: #f2c057;
+	text-underline-offset: -0.2em;
+	text-decoration-skip-ink: none;
+}
+
+/* ニュースの文字 */
+.news_text {
+	color: #f3ebdd;
+}
+
+/* ページトップボタンの文字 */
+.gotop_text {
+	font-weight: bold;
+}
+
+
+/*header
+---------------------*/
+header {
+	height: 120px;
+	width: 100%;
+	/* 背景パターン */
+	background-color: #cd853f;
+	background-image: linear-gradient(335deg, #99452b 23px, transparent 23px),
+		linear-gradient(155deg, #b55233 23px, transparent 23px),
+		linear-gradient(335deg, #99452b 23px, transparent 23px),
+		linear-gradient(155deg, #b55233 23px, transparent 23px);
+	background-size: 58px 58px;
+	background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+}
+
+
+/*h1～h6
+---------------------*/
+h1 {
+	font-size: 60px;
+	color: white;
+	text-align: center;
+	letter-spacing: 20px;
+	text-shadow: 2px 3px 5px #cd853f;
+	/* -webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #f2c057; */
+}
+
+h2 {
+	width: 150px;
+	font-size: 36px;
+	color: white;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #265000;
+}
+
+h3 {
+	font-size: 18px;
+	text-decoration: underline;
+	text-decoration-thickness: 0.5em;
+	text-decoration-color: #f2c057;
+	text-underline-offset: -0.2em;
+	text-decoration-skip-ink: none;
+}
+
+h4 {
+	width: 150px;
+	font-size: 24px;
+	color: black;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fdffff;
+	border: solid 5px #265000
+}
+
+h5 {
+	font-size: 18px;
+	color: white;
+	text-align: center;
+}
+
+h6 {
+	font-size: 36px;
+	width: 500px;
+	color: white;
+	margin-top: 50px;
+	background-color: #265000;
+}
+
+/* navi */
+.navi-box {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	background-color: #fdffff;
+	margin-top: 10px;
+
+}
+
+.navi-box_left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 100px;
+	width: 300px;
+	height: 80px;
+}
+
+.navi-box_left div {
+	width: 70%;
+}
+
+.navi-box_left div img {
+	width: 100%;
+}
+
+.navi-box_right {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 200px;
+	width: 500px;
+	height: 80px;
+	background-color: #265000;
+}
+
+.menu {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+}
+
+.menu li {
+	width: 100px;
+	text-align: center;
+	text-decoration: underline;
+	color: #fdffff;
+}
+
+
+/* イントロ */
+.introduction {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 800px;
+	height: 300px;
+	background-image: url(../img/kosi01.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.introduction_text {
+	text-align: center;
+	font-family: TheStrongGamer;
+	font-size: 28px;
+	color: #7d5642;
+}
+
+.introduction_text_y {
+	text-align: center;
+	font-family: TheStrongGamer;
+	font-size: 36px;
+	color: #7d5642;
+}
+
+.game-font_b {
+	text-align: center;
+	font-family: TheStrongGamer;
+	font-size: 28px;
+	line-height: 32px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	color: #cd853f;
+}
+
+
+/* クリックできる地図 */
+.map-box {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0 auto;
+	width: 700px;
+	height: 800px;
+	background-color: #b3de81;
+	border-radius: 10%;
+}
+
+.map-icon {
+	text-align: center;
+	padding: 20px;
+	background-color: #fdffff;
+	margin: 60px;
+}
+
+.map-icon_rose {
+	padding: 10px;
+	margin: 60px;
+}
+
+/* コース */
+.course-box {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	height: 600px;
+	width: 85%;
+	background-color: #fdffff;
+}
+
+.course-box_top {
+	height: 75px;
+	width: 300px;
+	font-weight: bold;
+}
+
+.course-box_middle {
+	height: 300px;
+	width: 300px;
+}
+
+.course-box_middle img {
+	width: 100%;
+}
+
+.course-box_bottom {
+	height: 300px;
+	width: 300px;
+	background-color: #f3ebdd;
+}
+
+
+
+/* ニュース */
+.news-box {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	height: 600px;
+	width: 85%;
+	background-color: #f3ebdd;
+}
+
+.triple-box_column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	width: 300px;
+}
+
+.triple-box_top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 250px;
+	background-color: #fdffff;
+}
+
+.triple-box_top div {
+	width: 100%;
+
+}
+
+.triple-box_top div img {
+	width: 100%;
+}
+
+.triple-box_middle {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	width: 220px;
+	height: 50px;
+}
+
+.triple-box_bottom {
+	width: 220px;
+	height: 250px;
+	background-color: #7d5642;
+}
+
+
+/* グーグルマップ */
+.access-map {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+}
+
+
+/* 連絡先 */
+.twin-box {
+	display: flex;
+	justify-content: center;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+	background-color: #fdffff;
+	border: solid 5px #265000
+}
+
+.twin-box_left {
+	width: 300px;
+	margin-left: 100px;
+}
+
+/* 所在地の下の文字消し */
+.mojikesi {
+	color: #fdffff;
+}
+
+
+.twin-box_right {
+	width: 350px;
+	margin-right: 50px;
+}
+
+/* コンタクト */
+.contact-text {
+	text-align: center;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 30px;
+	background-color: #fdffff;
+	font-weight: bold;
+	line-height: 40px;
+
+}
+
+/* コンタクトフォーム */
+.Form {
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 60px;
+	max-width: 720px;
+	background-color: #fdffff;
+}
+
+@media screen and (max-width: 480px) {
+	.Form {
+		margin-top: 40px;
+	}
+}
+
+.Form-Item {
+	border-top: 1px solid #ddd;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+	.Form-Item {
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		flex-wrap: wrap;
+	}
+}
+
+.Form-Item:nth-child(5) {
+	border-bottom: 1px solid #ddd;
+}
+
+.Form-Item-Label {
+	width: 100%;
+	max-width: 248px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 480px) {
+	.Form-Item-Label {
+		max-width: inherit;
+		display: flex;
+		align-items: center;
+		font-size: 15px;
+	}
+}
+
+.Form-Item-Label.isMsg {
+	margin-top: 8px;
+	margin-bottom: auto;
+}
+
+@media screen and (max-width: 480px) {
+	.Form-Item-Label.isMsg {
+		margin-top: 0;
+	}
+}
+
+.Form-Item-Label-Required_h {
+	border-radius: 6px;
+	margin-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 48px;
+	display: inline-block;
+	text-align: center;
+	background: #f2c057;
+	color: #fff;
+	font-size: 14px;
+}
+
+.Form-Item-Label-Required_n {
+	border-radius: 6px;
+	margin-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 48px;
+	display: inline-block;
+	text-align: center;
+	background: #486824;
+	color: #fff;
+	font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+	.Form-Item-Label-Required {
+		border-radius: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		width: 32px;
+		font-size: 10px;
+	}
+}
+
+.Form-Item-Input {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 48px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 480px) {
+	.Form-Item-Input {
+		margin-left: 0;
+		margin-top: 18px;
+		height: 40px;
+		flex: inherit;
+		font-size: 15px;
+	}
+}
+
+.Form-Item-Textarea {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 216px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 480px) {
+	.Form-Item-Textarea {
+		margin-top: 18px;
+		margin-left: 0;
+		height: 200px;
+		flex: inherit;
+		font-size: 15px;
+	}
+}
+
+.Form-Btn {
+	border-radius: 6px;
+	margin-top: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 32px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 280px;
+	display: block;
+	letter-spacing: 0.05em;
+	background: #f2c057;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+	.Form-Btn {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		width: 160px;
+		font-size: 16px;
+	}
+}
+
+
+/* ページトップボタン */
+.gotop-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 60px;
+	width: 60px;
+}
+
+.gotop {
+	position: fixed;
+	bottom: 75px;
+	right: 20px;
+	z-index: 10000;
+}
+
+/* ホームに戻るボタン */
+.gohome {
+	position: fixed;
+	top: 50px;
+	right: 120px;
+}
+
+.gohome_text {
+	position: fixed;
+	top: 70px;
+	right: 70px;
+}
+
+
+/* 家の画像 */
+.ie_image {
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 30px;
+	right: 20px;
+}
+
+/* 遷移先ページのテキスト部分の枠 */
+.another-box {
+	margin-top: 50px;
+	margin-left: 30px;
+	width: 80%;
+	height: 100%;
+	padding: 30px;
+	background-color: #fdffff;
+}
+
+
+
+/*footer
+---------------------*/
+footer {
+	height: 48px;
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* 背景パターン */
+	background-color: #cd853f;
+	background-image: linear-gradient(335deg, #99452b 23px, transparent 23px),
+		linear-gradient(155deg, #b55233 23px, transparent 23px),
+		linear-gradient(335deg, #99452b 23px, transparent 23px),
+		linear-gradient(155deg, #b55233 23px, transparent 23px);
+	background-size: 58px 58px;
+	background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+
+
+}
